@@ -1,0 +1,153 @@
+@mixin query-small {
+  @media screen and (min-width: 375px) {
+    @content;
+  }
+}
+
+@mixin query-medium {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin query-large {
+  @media screen and (min-width: 960px) {
+    @content;
+  }
+}
+
+.footer {
+  padding: 0;
+
+  .unit {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  @include query-large {
+    .size1of2 {
+      flex-basis: 50%;
+      max-width: 50%;
+    }
+  }
+
+  .row1 {
+    padding: 4em 0 2em;
+    @include query-medium {
+      padding: 5em 0 2em;
+    }
+  }
+  .row2 {
+    padding: 1em 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(0,0,0,.25);
+  }
+
+  .footer__agency {
+    display: flex;
+    flex-direction: column;
+
+    @include query-small {
+      flex-direction: row;
+    }
+
+    .footer__logo {
+      flex: 7em 0 0;
+      order: 1;
+      padding: 0 0 1em 0;
+
+      @include query-small {
+        order: 2;
+        padding: 0;
+      }
+
+      @include query-medium {
+        order: 1;
+        margin: 0 2em 0 0;
+        flex-basis: 8em;
+      }
+
+      @include query-large {
+      }
+
+      svg {
+        max-width: 7em;
+        @include query-small {
+          max-width: 100%;
+        }
+      }
+    }
+
+    .footer__contact {
+      margin-right: 1.5rem;
+      flex: auto 1 1;
+      order: 2;
+      @include query-small {
+        order: 1;
+      }
+    }
+  }
+
+  .footer__social {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .footer__social > li {
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+  }
+
+  .footer__newsletter {
+    p {
+      max-width: 30em;
+    }
+    .hs-form {
+      display: block;
+
+      @include query-medium {
+        display: flex;
+        .hs-form-field {
+          flex-grow: 1;
+        }
+        .hs_error_rollup {
+          display: none;
+        }
+      }
+
+      .hs-button {
+        margin: 0;
+        @include query-medium {
+          margin: 1em 0 0 1em;
+        }
+      }
+    }
+  }
+
+  .footer__links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex: 100% 0 0;
+    flex-direction: column;
+
+    @include query-small {
+      flex-direction: row;
+
+      li {
+        flex-grow: 0;
+        &:not(:last-child) {
+          margin-right: 2rem;
+        }
+      }
+    }
+    li a {
+      @include query-small {
+        font-size: 85%;
+      }
+    }
+  }
+}

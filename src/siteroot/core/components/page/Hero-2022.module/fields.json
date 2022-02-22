@@ -1,0 +1,104 @@
+[ {
+  "id" : "422b8cdc-c856-61f8-ddda-d73191a38771",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Section",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Services"
+}, {
+  "id" : "392f3887-4629-4e96-7170-a340d04ed325",
+  "name" : "sub_header",
+  "display_width" : null,
+  "label" : "Headline",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "What We Do"
+}, {
+  "id" : "4f434b47-1ae9-97fb-962b-92de66c3ccdf",
+  "name" : "summary",
+  "display_width" : null,
+  "label" : "Summary",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "0c25ee63-4988-74d9-8d75-de3599c44651",
+  "name" : "hero_image",
+  "display_width" : null,
+  "label" : "Hero Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : false,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "src" : "https://cdn2.hubspot.net/hubfs/2660159/rebrand/a7b3a3abad6614698b7df15ca692e27d0c001f4d.jpg",
+    "alt" : "a7b3a3abad6614698b7df15ca692e27d0c001f4d",
+    "width" : 857,
+    "height" : 850
+  }
+}, {
+  "id" : "781105bd-a34c-0a46-6eb9-f07a5d4ef6a5",
+  "name" : "hero_bg_color",
+  "display_width" : null,
+  "label" : "Background Color",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "theme-primary|#F16345|light", "Orange" ], [ "theme-secondary|#5284A1|light", "Blue" ], [ "theme-tertiary|#FED844|dark", "Yellow" ], [ "theme-black|#29292B|light", "Dark Gray" ], [ "theme-black-highlight|#161618|light", "Black" ], [ "theme-gray-1|#979596|dark", "Medium Gray" ], [ "theme-gray-2|#EEEAE6|dark", "Light Gray" ], [ "theme-white|#FFFFFF|dark", "White" ], [ "full_bleed_image|#000000|over-image", "Full Bleed Image" ] ],
+  "type" : "choice",
+  "default" : "theme-primary|#F16345|light"
+}, {
+  "id" : "e47d740f-6fa1-e40d-d126-712716d5627e",
+  "name" : "background_image_tint",
+  "display_width" : null,
+  "label" : "Background Image Tint",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "781105bd-a34c-0a46-6eb9-f07a5d4ef6a5",
+    "controlling_value_regex" : "full_bleed_image|#000000|over-image",
+    "operator" : "EQUAL",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "type" : "color",
+  "default" : {
+    "color" : "#000000",
+    "opacity" : 50
+  }
+}, {
+  "id" : "10a074a1-b6d0-28ea-f7bb-2225b9139324",
+  "name" : "transition_bg_color",
+  "display_width" : null,
+  "label" : "Transition BG Color",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "theme-primary|#F16345|light", "Orange" ], [ "theme-secondary|#5284A1|light", "Blue" ], [ "theme-tertiary|#FED844|dark", "Yellow" ], [ "theme-black|#29292B|dark|light", "Dark Gray" ], [ "theme-black-highlight|#161618|light", "Black" ], [ "theme-gray-1|#979596|dark", "Medium Gray" ], [ "theme-gray-2|#EEEAE6|dark", "Light Gray" ], [ "theme-white|#FFFFFF|dark", "White" ] ],
+  "type" : "choice",
+  "default" : "theme-gray-2|#EEEAE6|dark"
+}, {
+  "id" : "276c52d6-eddd-0048-fb85-39d853bee394",
+  "name" : "hide_lines",
+  "display_width" : null,
+  "label" : "Hide Lines",
+  "required" : false,
+  "locked" : false,
+  "display" : "toggle",
+  "type" : "boolean",
+  "default" : false
+} ]

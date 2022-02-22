@@ -1,4 +1,4 @@
 node_modules
-siteroot
 .vs
 .vscode
+/siteroot

@@ -1,0 +1,87 @@
+[ {
+  "id" : "392f3887-4629-4e96-7170-a340d04ed325",
+  "name" : "sub_header",
+  "display_width" : null,
+  "label" : "Lede (Short Intro)",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : ""
+}, {
+  "id" : "0c25ee63-4988-74d9-8d75-de3599c44651",
+  "name" : "hero_image",
+  "display_width" : null,
+  "label" : "Hero Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : false,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "src" : "https://cdn2.hubspot.net/hubfs/213744/warren-wong-323107-unsplash-1.jpg",
+    "alt" : "warren-wong-323107-unsplash-1",
+    "width" : 1600,
+    "height" : 2170
+  }
+}, {
+  "id" : "781105bd-a34c-0a46-6eb9-f07a5d4ef6a5",
+  "name" : "hero_bg_color",
+  "display_width" : null,
+  "label" : "Background Color",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "theme-primary|#F16345", "Primary" ], [ "theme-secondary|#5284A1", "Secondary" ], [ "theme-tertiary|#FED844", "Tertiary" ], [ "theme-secondary|#29292B", "Black" ], [ "theme-secondary|#161618", "Black Highlight" ], [ "theme-gray-1|#979596", "Gray 1" ], [ "theme-gray-2|#EEEAE6", "Gray 2" ], [ "theme-white|#FFFFFF", "White" ], [ "full_bleed_image|#000000|over-image", "Full Bleed" ] ],
+  "type" : "choice",
+  "default" : "theme-secondary|#5284A1"
+}, {
+  "id" : "cbabb198-e656-5fe0-cd6c-9872127892f2",
+  "name" : "mobile_image",
+  "display_width" : null,
+  "label" : "Mobile Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : false,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "exact",
+    "src" : "",
+    "alt" : null,
+    "loading" : "disabled"
+  }
+}, {
+  "id" : "2be3775f-8d9a-a188-a0a9-d14a5cc4e2cb",
+  "name" : "hide_lines",
+  "display_width" : null,
+  "label" : "Hide Lines",
+  "required" : false,
+  "locked" : false,
+  "display" : "toggle",
+  "type" : "boolean",
+  "default" : false
+}, {
+  "id" : "f71cf8d2-c8ae-a977-0a0c-2642b656b127",
+  "name" : "background_image_tint",
+  "display_width" : null,
+  "label" : "Background Image Tint",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "781105bd-a34c-0a46-6eb9-f07a5d4ef6a5",
+    "controlling_value_regex" : "full_bleed_image|#000000|over-image",
+    "operator" : "EQUAL",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "type" : "color",
+  "default" : {
+    "color" : "#000000",
+    "opacity" : 50
+  }
+} ]

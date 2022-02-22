@@ -1,0 +1,169 @@
+@mixin query-desktop {
+	@media screen and (min-width: 860px) {
+		@content;
+	}
+}
+$color-white: #fff;
+$color-black: #000;
+$color-primary: #f16345;
+
+@mixin theme-dark {
+	.line {
+		color: $color-black;
+		fill: $color-black;
+	}
+	.hero__text {
+		color: $color-black;
+	}
+}
+
+@mixin theme-light {
+	.line {
+		color: $color-white;
+	}
+	.hero__text {
+		color: $color-white;
+	}
+}
+
+@mixin theme-light-alt {
+	.line {
+		color: $color-primary;
+	}
+	.hero__text {
+		color: $color-white;
+	}
+}
+
+@mixin theme-fullbleedimage {
+	background-size: cover;
+	background-position: center;
+	> .inner {
+		padding-bottom: 23%;
+	}
+	.line {
+		color: $color-white;
+	}
+	.hero__text {
+		color: $color-white;
+	}
+}
+
+.hero {
+	background-size: 0%;
+	background-position: -100%;
+	background-repeat: no-repeat;
+	> .inner {
+		align-items: stretch;
+		padding-top: 8rem;
+		@include query-desktop {
+			min-height: 50vh;
+			padding-top: calc(6rem + 8%);
+			padding-bottom: 23%;
+		}
+		> .unit {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+	.hero__text {
+		@include query-desktop {
+			padding-right: 3rem;
+		}
+	}
+	.line {
+		transform-origin: center center;
+		z-index: 3;
+		display: none;
+		stroke-dasharray: none;
+		@include query-desktop {
+			display: block;
+		}
+		&.hero__line1 {
+			top: 10vw;
+			left: 20%;
+			transform: rotate(77.2deg);
+			bottom: auto;
+			height: 50%;
+			transform-origin: top left;
+		}
+		&.hero__line2 {
+			bottom: 25vw;
+			top: auto;
+			height: 50vw;
+			right: 25%;
+			left: auto;
+			transform: rotate(77.2deg);
+			transform-origin: bottom;
+		}
+		&.hero__line3 {
+			display: none;
+		}
+		&.hero__line4 {
+			bottom: -10%;
+			top: auto;
+			height: 50vw;
+			right: 0;
+			left: 25%;
+			transform: rotate(77.2deg);
+			transform-origin: bottom;
+		}
+	}
+	&.theme-primary,
+	&.theme-tertiary,
+	&.theme-gray-1,
+	&.theme-gray-2,
+	&.theme-white {
+		@include theme-dark;
+	}
+	&.theme-black,
+	&.theme-secondary {
+		@include theme-light;
+	}
+	&.theme-black-highlight {
+		@include theme-light-alt;
+	}
+	&.full_bleed_image {
+		@include theme-fullbleedimage;
+	}
+	&.no-lines {
+		.line {
+			display: none;
+		}
+		> .inner {
+			padding-top: calc(6rem + 5%);
+		}
+	}
+}
+
+.hero__image {
+	z-index: 1;
+	position: relative;
+	margin-top: 2rem;
+	@include query-desktop {
+		margin: 0;
+	}
+	img {
+		max-width: 100%;
+		width: 100%;
+		max-height: 100vh;
+		object-fit: cover;
+
+		@include query-desktop {
+			box-shadow: rgba(0, 0, 0, 0.25) 0px 48px 100px 0px;
+		}
+
+		&[src$=".png"] {
+			box-shadow: none;
+			margin-bottom: 30%;
+			@include query-desktop {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.hero__text_wrapper {
+	padding: 0;
+}

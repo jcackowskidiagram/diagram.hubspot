@@ -1,0 +1,12 @@
+{
+  "global" : true,
+  "smart_type" : "NOT_SMART",
+  "host_template_types" : [ "PAGE", "BLOG_POST", "BLOG_LISTING" ],
+  "module_id" : 7407099,
+  "css_assets" : [ {
+    "autoload" : true,
+    "path" : "../../../css/components/footer.css",
+    "name" : "footer.css"
+  } ],
+  "is_available_for_new_content" : true
+}

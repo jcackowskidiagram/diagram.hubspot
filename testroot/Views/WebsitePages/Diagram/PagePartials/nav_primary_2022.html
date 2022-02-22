@@ -1,0 +1,118 @@
+<!--
+  templateType: "page"
+  isAvailableForNewContent: false
+-->
+
+{% set mainNav = menu(8564773005) %} {# TODO: maybe don't hardcode this? #}
+
+{% set modulearray = [] %}
+{% for y in content.allWidgets %}
+  {% do modulearray.append( y.module_id ) %}
+{% endfor %}
+
+{% if "64912877600" in modulearray %}
+{# Get value of hero_bg_color from the Hero module #}
+  {% for w in content.allWidgets %}
+    {% if w.module_id == "64912877600" %} {# TODO: only hardcode this if we have a universal hero module #}
+      {% set theme = w.body.hero_bg_color|split('|') %} 
+      {% set theme_name = theme[0] %}
+      {% set theme_color = theme[1] %}
+      {% set theme_style = theme[2] %}
+      {% if theme_style == "dark" %}
+        <nav class="nav-primary theme-dark visible@nav-primary-expanded" id="nav-primary">
+      {% elif theme_style == "over-image" %}
+        <nav class="nav-primary theme-overimage visible@nav-primary-expanded" id="nav-primary">
+      {% else %}
+        <nav class="nav-primary visible@nav-primary-expanded" id="nav-primary">
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% else %}
+    <nav class="nav-primary theme-legacy visible@nav-primary-expanded" id="nav-primary">    
+{% endif %}
+  <div class="inner">
+    <div class="unit size1of1">
+      <a href="/" rel="home" class="logo nav-logo">
+        <svg width="72" height="70" viewBox="0 0 72 70" xmlns="http://www.w3.org/2000/svg">
+          <path d="M46.014 56.455l1.436-.69.425.878-3.818 1.833-.37-.765-1.494-3.095.917-.44 1.44 2.982.547-.263c-1.163-2.491-.318-3.656 1.156-4.364 1.716-.825 3.536-.034 4.84 2.666 1.101 2.283.457 4.77-1.48 5.7-1.54.74-3.474.275-4.437-1.074l1.156-.555c.573 1.076 1.608 1.337 2.874.73 1.53-.736 1.887-1.935 1.076-3.614l-.63-1.306c-.955-1.977-1.851-2.173-2.97-1.656-.018.01-.15.071-.17.08-.852.41-1.371 1.079-.498 2.953zm-22.307-.723l-.193-4.056 1.21.58v3.705c.233.08.356.142.356.142l1.385.665 1.44-2.982.974.467-3.806 7.882-2.59-1.245c-1.477-.708-2.123-2.317-1.477-3.656l.056-.113c.464-.96 1.497-1.462 2.645-1.39zm-4.243-34.825l-1.234 1.542-7.246-3.424-.516.654 6.098 4.85-.633.794-6.863-5.45 1.693-2.116 7.196 3.448.258-.322-4.972-6.23 1.669-2.087 6.854 5.45-.634.794-6.104-4.854-.511.649 4.945 6.302zM38.989 7.712v-1.45c0-1.632-.99-2.68-2.529-2.68h-1.752v6.798h1.752c1.54 0 2.53-1.047 2.53-2.668zm-2.517-5.104c2.114 0 3.764 1.924 3.764 4.374 0 2.448-1.65 4.373-3.764 4.373h-2.845V2.608h2.845zM52.96 19.115l6.858-5.454.675.844-6.86 5.453-.673-.843zm8.982 18.607l-.614 2.68 3.628-.174.181-.79-3.195-1.716zm4.3 1.267l-.508 2.217-9.122.547.26-1.14 3.443-.169.736-3.212-3.032-1.628.25-1.092 7.973 4.477zM26.04 57.646l-1.65-.792c-1-.481-1.714-.324-2.096.466l-.362.75c-.382.79-.06 1.445.942 1.927l1.648.792 1.518-3.143zM10.71 40.43l-.613-2.68-3.194 1.725.182.792 3.625.163zm-4.427.719l-.506-2.217 7.982-4.44.26 1.14-3.029 1.642.736 3.212 3.44.155.249 1.093-9.132-.585zM35 33.506L0 25.54l.198-.867 35 7.967L19.62.386 20.424 0 36 32.256 51.576 0l.803.386L36.803 32.64l35-7.967.197.867-35 7.966 28.068 22.321-.555.694L36.445 34.2V70h-.89V34.2L7.487 56.521l-.555-.694 28.067-22.321z" fill-rule="evenodd"/>
+        </svg>
+      </a>
+      <ul class="nav-primary__items">
+        {% for navItem in mainNav.children %}
+        <li>
+          <a {% if navItem.url == company_domain ? absolute_url == company_domain : navItem.url in absolute_url %}class="active" {% endif %} href="{{navItem.url}}">{{navItem.label}}</a>
+        </li>
+        {% endfor %}  
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+{% if "64912877600" in modulearray %}
+  {# Get value of hero_bg_color from the Hero module #}
+  {% for w in content.allWidgets %}
+      {% if w.module_id == "64912877600" %} {# TODO: only hardcode this if we have a universal hero module #}
+        {% set theme = w.body.hero_bg_color|split('|') %} 
+        {% set theme_name = theme[0] %}
+        {% set theme_color = theme[1] %}
+        {% set theme_style = theme[2] %}
+        {% if theme_style == "dark" %}
+          <div id="nav-primary-condensed" class="nav-primary-condensed theme-dark">
+        {% elif theme_style == "over-image" %}
+          <div id="nav-primary-condensed" class="nav-primary-condensed theme-overimage">
+        {% else %}
+          <div id="nav-primary-condensed" class="nav-primary-condensed">
+        {% endif %}
+      {% endif %}
+  {% endfor %}
+  {% else %}
+    <div id="nav-primary-condensed" class="nav-primary-condensed  theme-legacy">    
+  {% endif %}
+
+  <a href="/" rel="home" class="logo nav-logo">
+    <svg width="72" height="70" viewBox="0 0 72 70" xmlns="http://www.w3.org/2000/svg">
+      <path d="M46.014 56.455l1.436-.69.425.878-3.818 1.833-.37-.765-1.494-3.095.917-.44 1.44 2.982.547-.263c-1.163-2.491-.318-3.656 1.156-4.364 1.716-.825 3.536-.034 4.84 2.666 1.101 2.283.457 4.77-1.48 5.7-1.54.74-3.474.275-4.437-1.074l1.156-.555c.573 1.076 1.608 1.337 2.874.73 1.53-.736 1.887-1.935 1.076-3.614l-.63-1.306c-.955-1.977-1.851-2.173-2.97-1.656-.018.01-.15.071-.17.08-.852.41-1.371 1.079-.498 2.953zm-22.307-.723l-.193-4.056 1.21.58v3.705c.233.08.356.142.356.142l1.385.665 1.44-2.982.974.467-3.806 7.882-2.59-1.245c-1.477-.708-2.123-2.317-1.477-3.656l.056-.113c.464-.96 1.497-1.462 2.645-1.39zm-4.243-34.825l-1.234 1.542-7.246-3.424-.516.654 6.098 4.85-.633.794-6.863-5.45 1.693-2.116 7.196 3.448.258-.322-4.972-6.23 1.669-2.087 6.854 5.45-.634.794-6.104-4.854-.511.649 4.945 6.302zM38.989 7.712v-1.45c0-1.632-.99-2.68-2.529-2.68h-1.752v6.798h1.752c1.54 0 2.53-1.047 2.53-2.668zm-2.517-5.104c2.114 0 3.764 1.924 3.764 4.374 0 2.448-1.65 4.373-3.764 4.373h-2.845V2.608h2.845zM52.96 19.115l6.858-5.454.675.844-6.86 5.453-.673-.843zm8.982 18.607l-.614 2.68 3.628-.174.181-.79-3.195-1.716zm4.3 1.267l-.508 2.217-9.122.547.26-1.14 3.443-.169.736-3.212-3.032-1.628.25-1.092 7.973 4.477zM26.04 57.646l-1.65-.792c-1-.481-1.714-.324-2.096.466l-.362.75c-.382.79-.06 1.445.942 1.927l1.648.792 1.518-3.143zM10.71 40.43l-.613-2.68-3.194 1.725.182.792 3.625.163zm-4.427.719l-.506-2.217 7.982-4.44.26 1.14-3.029 1.642.736 3.212 3.44.155.249 1.093-9.132-.585zM35 33.506L0 25.54l.198-.867 35 7.967L19.62.386 20.424 0 36 32.256 51.576 0l.803.386L36.803 32.64l35-7.967.197.867-35 7.966 28.068 22.321-.555.694L36.445 34.2V70h-.89V34.2L7.487 56.521l-.555-.694 28.067-22.321z" fill-rule="evenodd"/>
+    </svg>
+  </a>
+
+  <button id="menu-toggle" class="nav-primary-condensed__toggle nav-primary-condensed__menu-toggle">
+    <svg class="open" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 16" style="enable-background:new 0 0 24 16;">
+      <path d="M0,2V0h24v2H0z M0,9V7h24v2H0z M0,16v-2h24v2H0z" />
+    </svg>
+    <svg class="close" xm lns="http://www.w3.org/2000/svg" viewBox="0 0 25.2 20.7" style="enable-background:new 0 0 25.2 20.7;">
+      <polygon points="25.2,1.6 24,0 12.6,9.1 1.2,0 0,1.6 11,10.4 0,19.1 1.2,20.7 12.6,11.6 24,20.7 25.2,19.1 14.2,10.4 " />
+    </svg>
+  </button>
+
+  <nav id="nav-overlay" class="overlay nav-overlay">
+    <ul class="nav-tree">
+
+      {% for navItem in mainNav.children %}
+      <li><a {% if navItem.url == absolute_url %}class="active" {% endif %}href="{{navItem.url}}">{{navItem.label}}</a>
+        {% if navItem.children %}
+        <ul>
+          {% for childItem in navItem.children %}
+          <li><a {% if childItem.url in absolute_url %}class="active" {% endif %}href="{{childItem.url}}">{{childItem.label}}</a></li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+
+  <button id="search-toggle" class="nav-primary-condensed__toggle nav-primary-condensed__search-toggle">
+    <svg class="open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+      <path d="M10,0C5.6,0,2,3.6,2,8c0,1.9,0.6,3.6,1.7,4.9L0,16.6L1.4,18l3.7-3.7C6.4,15.4,8.1,16,10,16c4.4,0,8-3.6,8-8
+               C18,3.6,14.4,0,10,0 M10,14c-3.3,0-6-2.7-6-6c0-3.3,2.7-6,6-6c3.3,0,6,2.7,6,6C16,11.3,13.3,14,10,14"></path>
+    </svg>
+    <svg class="close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.2 20.7">
+      <polygon points="25.2,1.6 24,0 12.6,9.1 1.2,0 0,1.6 11,10.4 0,19.1 1.2,20.7 12.6,11.6 24,20.7 25.2,19.1 14.2,10.4 " />
+    </svg>
+  </button>
+  <div id="search-overlay" class="overlay search-overlay">
+    {% module "module_1556138026475536" path="/siteroot/core/components/global/Diagram Site Search Input" overrideable=False, no_wrapper=True %}
+  </div>
+</div>
+

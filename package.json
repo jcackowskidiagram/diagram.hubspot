@@ -1,0 +1,26 @@
+{
+	"name": "diagram.hubspot",
+	"title": "Diagram",
+	"version": "1.0.0",
+	"private": true,
+	"scripts": {
+		"watch_copyfiles": "nodemon -e css,html --watch src/siteroot/* --exec \"yarn copyfiles\"",
+		"cleanwhatever": "rimraf whatevedestinationrfolder",
+		"copyfiles": "copyfiles -u 2 \"./src/siteroot/**/*.{css,html}\" \"siteroot/\"",
+		"backupscss": "copyfiles siteroot/**/*.scss src/",
+		"sass:watch": "sass --watch src/",
+		"hs:watch": "hs watch siteroot siteroot",
+		"watch": "concurrently \"yarn sass:watch\" \"yarn watch_copyfiles\" \"yarn hs:watch\""
+	},
+	"devDependencies": {
+		"concurrently": "^7.0.0",
+		"copyfiles": "^2.4.1",
+		"node-sass": "^7.0.1",
+		"nodemon": "^2.0.15",
+		"rimraf": "^3.0.2",
+		"sass": "^1.49.8"
+	},
+	"main": "index.js",
+	"license": "MIT",
+	"dependencies": {}
+}

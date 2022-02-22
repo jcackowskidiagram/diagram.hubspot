@@ -2,3 +2,4 @@ node_modules
 /siteroot
 /.vscode
 /.vs
+/hubspot.config.yml

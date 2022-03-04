@@ -30,7 +30,7 @@
 	.nav-primary__items {
 		justify-content: flex-start;
 		li {
-			margin-right: 1rem;
+			margin-right: 2rem;
 			a {
 				&:hover,
 				&.active {
@@ -45,6 +45,9 @@
 	body.-overlay-active & {
 		.nav-logo svg {
 			fill: #fff;
+		}
+		.nav-primary__items {
+			display: none;
 		}
 	}
 	// desktop menu themes

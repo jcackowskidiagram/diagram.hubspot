@@ -27,7 +27,7 @@
   justify-content: flex-start;
 }
 .nav-primary .nav-primary__items li {
-  margin-right: 1rem;
+  margin-right: 2rem;
 }
 .nav-primary .nav-primary__items li a:hover, .nav-primary .nav-primary__items li a.active {
   color: #fff;
@@ -37,6 +37,9 @@
 }
 body.-overlay-active .nav-primary .nav-logo svg {
   fill: #fff;
+}
+body.-overlay-active .nav-primary .nav-primary__items {
+  display: none;
 }
 .nav-primary.theme-dark .nav-primary__items li a {
   color: #000;

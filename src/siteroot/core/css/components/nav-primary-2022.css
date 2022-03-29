@@ -35,6 +35,9 @@
 .nav-primary .nav-primary__items li a::after {
   background-color: #fff;
 }
+.nav-primary .nav-primary__items li a {
+  font-size: 0.7em;
+}
 body.-overlay-active .nav-primary .nav-logo svg {
   fill: #fff;
 }

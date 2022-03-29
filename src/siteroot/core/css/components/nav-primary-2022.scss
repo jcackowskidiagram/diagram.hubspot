@@ -42,6 +42,15 @@
 			}
 		}
 	}
+
+	.nav-primary__items {
+		li {
+			a {
+				font-size: 0.7em;
+			}
+		}
+	}
+
 	body.-overlay-active & {
 		.nav-logo svg {
 			fill: #fff;

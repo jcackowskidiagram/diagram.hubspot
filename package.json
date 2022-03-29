@@ -14,6 +14,7 @@
 		"watch": "concurrently \"yarn sass:watch\" \"yarn watch_copyfiles\" \"yarn hs:watch\""
 	},
 	"devDependencies": {
+		"@hubspot/cli": "^3.0.11",
 		"concurrently": "^7.0.0",
 		"copyfiles": "^2.4.1",
 		"node-sass": "^7.0.1",

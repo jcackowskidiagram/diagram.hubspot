@@ -5,7 +5,7 @@
 	"private": true,
 	"scripts": {
 		"watch_copyfiles": "nodemon -e css,html --watch src/siteroot/* --exec \"yarn copyfiles\"",
-		"copyfiles": "copyfiles -u 2 \"./src/siteroot/**/*.{css}\" \"siteroot/\"",
+		"copyfiles": "copyfiles -u 2 \"./src/siteroot/**/*.css\" \"siteroot/\"",
 		"backupscss": "copyfiles siteroot/**/*.scss src/",
 		"sass:watch": "sass --watch src/",
 		"hs:watch": "hs watch siteroot siteroot",

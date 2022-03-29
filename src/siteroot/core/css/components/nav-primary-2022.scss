@@ -144,3 +144,8 @@
 		}
 	}
 }
+body.-overlay-active {
+	div.scroll-lock {
+		overflow-y: scroll;
+	}
+}

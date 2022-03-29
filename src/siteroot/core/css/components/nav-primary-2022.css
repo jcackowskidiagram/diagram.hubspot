@@ -112,5 +112,8 @@ body.-overlay-active .nav-primary .nav-primary__items {
     display: none;
   }
 }
+body.-overlay-active div.scroll-lock {
+  overflow-y: scroll;
+}
 
 /*# sourceMappingURL=nav-primary-2022.css.map */

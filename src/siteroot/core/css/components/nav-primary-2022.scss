@@ -1,6 +1,10 @@
 @mixin theme-overimage {
 	background: rgb(0, 0, 0);
 	background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+
+	body.-overlay-active & {
+		background: none;
+	}
 }
 
 .nav-primary {
@@ -156,5 +160,90 @@
 body.-overlay-active {
 	div.scroll-lock {
 		overflow-y: scroll;
+	}
+}
+
+.search-overlay {
+	.search-overlay-inner {
+		padding: 1.5rem;
+		max-width: calc(61.5rem + 1.5rem * 2);
+		flex-grow: 1;
+
+		@media screen and (max-width: 920px) {
+			width: auto;
+		}
+
+		.hs-search-field {
+			padding: 0;
+		}
+		.hs-search-field__suggestions {
+			margin: 2rem 0 4rem;
+			.hs-search-highlight {
+				font-weight: 700;
+				// color: scale-color(#f16345, $lightness: 25%);
+				color:#f16345;
+				background: rgba(255,255,255,.05);
+			}
+		}
+		.search-overlay__form {
+			border-bottom: 2px solid #fff;
+			max-width: none;
+
+			input[type="search"] {
+				border: 0 none;
+				padding: 1rem 0 !important;
+			}
+			button {
+				border: 0 none;
+				padding: 1rem 0;
+				height: auto;
+				border-radius: 0;
+				flex-basis: 2rem;
+				svg {
+					width: 100%;
+				}
+			}
+			@media screen and (max-width: 660px) {
+				flex-direction: row;
+				align-items: center;
+				button {
+					margin: 0 0 0 1.5rem;
+					&.submit {
+						flex-basis: 1rem;
+					}
+				}
+			}
+		}
+		h5 {
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+			color: rgba(255, 255, 255, 0.5);
+		}
+		.search-overlay-tags {
+			list-style: none;
+			display: flex;
+			margin: 0;
+			padding: 0;
+			flex-wrap: wrap;
+			li {
+				flex-shrink: 0;
+				&:not(:last-child) {
+					margin: 0 1em 1em 0;
+				}
+				a {
+					font-size: 0.85em;
+					display: block;
+					padding: 0.3em 1em 0.5em;
+					border: 2px solid #f16345;
+					line-height: 1;
+					text-decoration: none;
+					&:hover,
+					&:focus {
+						color: #fff;
+						border-color: #fff;
+					}
+				}
+			}
+		}
 	}
 }

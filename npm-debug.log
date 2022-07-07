@@ -1,0 +1,48 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'run',
+1 verbose cli   'hs:fetch' ]
+2 info using npm@3.10.10
+3 info using node@v6.17.1
+4 verbose run-script [ 'prehs:fetch', 'hs:fetch', 'posths:fetch' ]
+5 info lifecycle diagram.hubspot@1.0.0~prehs:fetch: diagram.hubspot@1.0.0
+6 silly lifecycle diagram.hubspot@1.0.0~prehs:fetch: no script for prehs:fetch, continuing
+7 info lifecycle diagram.hubspot@1.0.0~hs:fetch: diagram.hubspot@1.0.0
+8 verbose lifecycle diagram.hubspot@1.0.0~hs:fetch: unsafe-perm in lifecycle true
+9 verbose lifecycle diagram.hubspot@1.0.0~hs:fetch: PATH: C:\Users\JayCackowski\AppData\Roaming\nvm\v6.17.1\node_modules\npm\bin\node-gyp-bin;C:\Users\JayCackowski\source\repos\diagram.hubspot\node_modules\.bin;C:\Users\JAYCAC~1\AppData\Local\Temp\yarn--1657073519294-0.1705211772258326;C:\Users\JayCackowski\source\repos\diagram.hubspot\node_modules\.bin;C:\Users\JayCackowski\AppData\Local\Yarn\Data\link\node_modules\.bin;C:\Program Files\libexec\lib\node_modules\npm\bin\node-gyp-bin;C:\Program Files\lib\node_modules\npm\bin\node-gyp-bin;C:\Program Files\nodejs\node_modules\npm\bin\node-gyp-bin;C:\Python310\Scripts\;C:\Python310\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Mitel\Connect\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Users\JayCackowski\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\dotnet\;C:\ProgramData\chocolatey\bin;C:\Users\JayCackowski\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\Program Files\GitHub CLI\;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\JayCackowski\AppData\Local\Microsoft\WindowsApps;C:\Users\JayCackowski\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files (x86)\BrowserStackLocal\;C:\Users\JayCackowski\.dotnet\tools;C:\tools\dart-sdk\bin;C:\Users\JayCackowski\AppData\Roaming\Pub\Cache\bin;C:\Users\JayCackowski\AppData\Local\Yarn\bin
+10 verbose lifecycle diagram.hubspot@1.0.0~hs:fetch: CWD: C:\Users\JayCackowski\source\repos\diagram.hubspot
+11 silly lifecycle diagram.hubspot@1.0.0~hs:fetch: Args: [ '/d /s /c', 'hs fetch siteroot siteroot --overwrite' ]
+12 silly lifecycle diagram.hubspot@1.0.0~hs:fetch: Returned: code: 1  signal: null
+13 info lifecycle diagram.hubspot@1.0.0~hs:fetch: Failed to exec hs:fetch script
+14 verbose stack Error: diagram.hubspot@1.0.0 hs:fetch: `hs fetch siteroot siteroot --overwrite`
+14 verbose stack Exit status 1
+14 verbose stack     at EventEmitter.<anonymous> (C:\Users\JayCackowski\AppData\Roaming\nvm\v6.17.1\node_modules\npm\lib\utils\lifecycle.js:255:16)
+14 verbose stack     at emitTwo (events.js:106:13)
+14 verbose stack     at EventEmitter.emit (events.js:191:7)
+14 verbose stack     at ChildProcess.<anonymous> (C:\Users\JayCackowski\AppData\Roaming\nvm\v6.17.1\node_modules\npm\lib\utils\spawn.js:40:14)
+14 verbose stack     at emitTwo (events.js:106:13)
+14 verbose stack     at ChildProcess.emit (events.js:191:7)
+14 verbose stack     at maybeClose (internal/child_process.js:920:16)
+14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:230:5)
+15 verbose pkgid diagram.hubspot@1.0.0
+16 verbose cwd C:\Users\JayCackowski\source\repos\diagram.hubspot
+17 error Windows_NT 10.0.19044
+18 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "run" "hs:fetch"
+19 error node v6.17.1
+20 error npm  v3.10.10
+21 error code ELIFECYCLE
+22 error diagram.hubspot@1.0.0 hs:fetch: `hs fetch siteroot siteroot --overwrite`
+22 error Exit status 1
+23 error Failed at the diagram.hubspot@1.0.0 hs:fetch script 'hs fetch siteroot siteroot --overwrite'.
+23 error Make sure you have the latest version of node.js and npm installed.
+23 error If you do, this is most likely a problem with the diagram.hubspot package,
+23 error not with npm itself.
+23 error Tell the author that this fails on your system:
+23 error     hs fetch siteroot siteroot --overwrite
+23 error You can get information on how to open an issue for this project with:
+23 error     npm bugs diagram.hubspot
+23 error Or if that isn't available, you can get their info via:
+23 error     npm owner ls diagram.hubspot
+23 error There is likely additional logging output above.
+24 verbose exit [ 1, true ]

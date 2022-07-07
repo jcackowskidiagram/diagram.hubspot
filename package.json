@@ -7,10 +7,11 @@
 		"watch_copyfiles": "nodemon -e css,html --watch src/siteroot/* --exec \"yarn copyfiles\"",
 		"copyfiles": "copyfiles -u 2 \"./src/siteroot/**/*.css\" \"siteroot/\"",
 		"backupscss": "copyfiles siteroot/**/*.scss src/",
-		"sass:watch": "sass --watch src/",
+		"sass:watch": "sass --no-source-map --watch src/",
 		"hs:watch": "hs watch siteroot siteroot",
 		"hs:clean": "rimraf siteroot",
 		"hs:fetch": "hs fetch siteroot siteroot --overwrite",
+		"refresh": "npm run hs:clean && npm run hs:fetch",
 		"watch": "concurrently \"yarn sass:watch\" \"yarn watch_copyfiles\" \"yarn hs:watch\""
 	},
 	"devDependencies": {

@@ -180,9 +180,7 @@ body.-overlay-active {
 			margin: 2rem 0 4rem;
 			.hs-search-highlight {
 				font-weight: 700;
-				// color: scale-color(#f16345, $lightness: 25%);
-				color:#f16345;
-				background: rgba(255,255,255,.05);
+				background: rgba(255, 255, 255, 0.05);
 			}
 		}
 		.search-overlay__form {
@@ -214,10 +212,11 @@ body.-overlay-active {
 				}
 			}
 		}
-		h5 {
+		.search-subhead {
 			text-transform: uppercase;
 			letter-spacing: 0.1em;
 			color: rgba(255, 255, 255, 0.5);
+			font-size: 0.85em;
 		}
 		.search-overlay-tags {
 			list-style: none;

@@ -143,7 +143,6 @@ body.-overlay-active div.scroll-lock {
 }
 .search-overlay .search-overlay-inner .hs-search-field__suggestions .hs-search-highlight {
   font-weight: 700;
-  color: #f16345;
   background: rgba(255, 255, 255, 0.05);
 }
 .search-overlay .search-overlay-inner .search-overlay__form {
@@ -176,10 +175,11 @@ body.-overlay-active div.scroll-lock {
     flex-basis: 1rem;
   }
 }
-.search-overlay .search-overlay-inner h5 {
+.search-overlay .search-overlay-inner .search-subhead {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: rgba(255, 255, 255, 0.5);
+  font-size: 0.85em;
 }
 .search-overlay .search-overlay-inner .search-overlay-tags {
   list-style: none;

@@ -2,7 +2,7 @@
 	background: rgb(0, 0, 0);
 	background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
 
-	body.-overlay-active & {
+	html.-overlay-active & {
 		background: none;
 	}
 }
@@ -12,7 +12,7 @@
 	height: auto;
 	padding: 2rem 0;
 	position: absolute;
-	left: 56px;
+	left: 0;
 	right: 0;
 	> .inner {
 		height: 100%;
@@ -55,7 +55,7 @@
 		}
 	}
 
-	body.-overlay-active & {
+	html.-overlay-active & {
 		.nav-logo svg {
 			fill: #fff;
 		}
@@ -139,7 +139,7 @@
 				fill: #fff;
 			}
 		}
-		body.-overlay-active & {
+		html.-overlay-active & {
 			svg {
 				fill: #fff;
 			}
@@ -157,8 +157,9 @@
 		}
 	}
 }
-body.-overlay-active {
-	div.scroll-lock {
+.scroll-lock {
+	position: relative;
+	html.-overlay-active & {
 		overflow-y: scroll;
 	}
 }

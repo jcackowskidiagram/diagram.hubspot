@@ -3,7 +3,7 @@
   height: auto;
   padding: 2rem 0;
   position: absolute;
-  left: 56px;
+  left: 0;
   right: 0;
 }
 .nav-primary > .inner {
@@ -38,10 +38,10 @@
 .nav-primary .nav-primary__items li a {
   font-size: 0.7em;
 }
-body.-overlay-active .nav-primary .nav-logo svg {
+html.-overlay-active .nav-primary .nav-logo svg {
   fill: #fff;
 }
-body.-overlay-active .nav-primary .nav-primary__items {
+html.-overlay-active .nav-primary .nav-primary__items {
   display: none;
 }
 .nav-primary.theme-dark .nav-primary__items li a {
@@ -57,10 +57,10 @@ body.-overlay-active .nav-primary .nav-primary__items {
   fill: #000;
 }
 .nav-primary.theme-overimage {
-  background: black;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, black 100%);
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);
 }
-body.-overlay-active .nav-primary.theme-overimage {
+html.-overlay-active .nav-primary.theme-overimage {
   background: none;
 }
 .nav-primary.theme-legacy {
@@ -94,10 +94,10 @@ body.-overlay-active .nav-primary.theme-overimage {
     fill: #000;
   }
   .nav-primary-condensed.theme-overimage {
-    background: black;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, black 100%);
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);
   }
-  body.-overlay-active .nav-primary-condensed.theme-overimage {
+  html.-overlay-active .nav-primary-condensed.theme-overimage {
     background: none;
   }
   .nav-primary-condensed.theme-legacy {
@@ -109,10 +109,10 @@ body.-overlay-active .nav-primary.theme-overimage {
   .nav-primary-condensed .nav-primary-condensed__toggle:hover svg {
     fill: #fff;
   }
-  body.-overlay-active .nav-primary-condensed svg {
+  html.-overlay-active .nav-primary-condensed svg {
     fill: #fff;
   }
-  body.-overlay-active .nav-primary-condensed .-active svg {
+  html.-overlay-active .nav-primary-condensed .-active svg {
     fill: #f16345;
   }
 }
@@ -121,7 +121,10 @@ body.-overlay-active .nav-primary.theme-overimage {
     display: none;
   }
 }
-body.-overlay-active div.scroll-lock {
+.scroll-lock {
+  position: relative;
+}
+html.-overlay-active .scroll-lock {
   overflow-y: scroll;
 }
 
@@ -206,5 +209,3 @@ body.-overlay-active div.scroll-lock {
   color: #fff;
   border-color: #fff;
 }
-
-/*# sourceMappingURL=nav-primary-2022.css.map */
